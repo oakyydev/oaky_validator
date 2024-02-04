@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/oakyydev/oaky_validator.git"
+    "url": "https://github.com/oakyydev/oaky_validator.git"
   },
   "keywords": [
     "fivem",
