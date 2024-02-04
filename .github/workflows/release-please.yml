@@ -23,7 +23,8 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
-          release-type: node
+          manifest-file: .release-please-manifest.json
+          config-file: release-please-config.json
           target-branch: rc
       - uses: actions/setup-node@v4
         with:
