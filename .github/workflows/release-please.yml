@@ -17,25 +17,7 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          # this assumes that you have created a personal access token
-          # (PAT) and configured it as a GitHub action secret named
-          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.GH_TOKEN }}
-          # this is a built-in strategy in release-please, see "Action Inputs"
-          # for more options
           manifest-file: .release-please-manifest.json
           config-file: release-please-config.json
           target-branch: rc
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: 'https://registry.npmjs.org'
-        if: ${{ steps.release.outputs.prs_created }}
-      - run: npm ci
-        if: ${{ steps.release.outputs.prs_created }}
-      - run: npm version ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
-        if: ${{ steps.release.outputs.prs_created }}
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: ${{ steps.release.outputs.prs_created }}

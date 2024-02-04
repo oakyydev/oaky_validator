@@ -3,3 +3,4 @@ src/ export-ignore
 tsconfig.json export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
+CHANGELOG.md export-ignore

@@ -4,5 +4,6 @@
         "exclude-paths": [
             ".github/workflows"
         ]
-    }
+    },
+    "plugins": ["sentence-case"]
 }
