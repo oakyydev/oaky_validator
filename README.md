@@ -40,14 +40,14 @@ Some of our rules require additional arguments to properly validate the field. F
 ### Existing Rules
 | Rule name   | Requires argument | Argument | Example              | Explanation |
 | ---------   | ----------------- | -------- | -------------------- | ----------- |
-| required    | [ ]               |          |                      | Checks if the field has been filled.
-| string      | [ ]               |          |                      | Checks if the field is an string.
-| numeric     | [ ]               |          |                      | Checks if the field only contains numbers.
-| max         | [x]               | number   | max:12               | Checks if the field does not exceeds the given value.
-| min         | [x]               | number   | min:12               | Checks if the field isn't lower than the given value.
-| in          | [x]               | string   | in:FiveM,altV,RageMP | Checks if the field is included in the given value.
-| array       | [ ]               |          |                      | Checks if the field is an array.
-| date_format | [ ] (optional)    | string   | date_format:YYYY-MM-DD      | Checks if the field follows the same format.
+| required    | :x:               |          |                      | Checks if the field has been filled.
+| string      | :x:               |          |                      | Checks if the field is an string.
+| numeric     | :x:               |          |                      | Checks if the field only contains numbers.
+| max         | :white_check_mark:              | number   | max:12               | Checks if the field does not exceeds the given value.
+| min         | :white_check_mark:               | number   | min:12               | Checks if the field isn't lower than the given value.
+| in          | :white_check_mark:               | string   | in:FiveM,altV,RageMP | Checks if the field is included in the given value.
+| array       | :x:               |          |                      | Checks if the field is an array.
+| date_format | :x: (optional)    | string   | date_format:YYYY-MM-DD      | Checks if the field follows the same format.
 
 
 ## Support
