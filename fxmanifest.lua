@@ -14,3 +14,5 @@ files {
     'lang.json',
     'dist/*.js'
 }
+
+server_script 'server/versionChecker.lua'
