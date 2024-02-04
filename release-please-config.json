@@ -1,0 +1,8 @@
+{
+    ".": {
+        "release-type": "node",
+        "exclude-paths": [
+            ".github/workflows"
+        ]
+    }
+}
