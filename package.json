@@ -1,6 +1,6 @@
 {
   "name": "@oakydev/validator",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Provides multiple functions to validate user entered values.",
   "main": "dist/main.js",
   "scripts": {
