@@ -47,7 +47,6 @@ Some of our rules require additional arguments to properly validate the field. F
 | min         | :white_check_mark:               | number   | min:12               | Checks if the field isn't lower than the given value.
 | in          | :white_check_mark:               | string   | in:FiveM,altV,RageMP | Checks if the field is included in the given value.
 | array       | :x:               |          |                      | Checks if the field is an array.
-| date_format | :x: (optional)    | string   | date_format:YYYY-MM-DD      | Checks if the field follows the same format.
 
 
 ## Support
