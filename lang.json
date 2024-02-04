@@ -1,0 +1,12 @@
+{
+    "attributes": {
+        "firstname": "Vorname",
+        "lastname": "Nachname",
+        "height": "Größe",
+        "birthday": "Geburtsdatum",
+        "birth_place": "Geburtsland",
+        "nationality": "Nationalität",
+        "eye_color": "Augenfarbe",
+        "hair_color": "Haarfarbe"
+    }
+}

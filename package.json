@@ -1,0 +1,29 @@
+{
+  "name": "oaky_validator",
+  "version": "1.0.0",
+  "description": "Provides multiple functions to validate user entered values.",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oakyydev/oaky_validator.git"
+  },
+  "keywords": [
+    "fivem",
+    "gtav",
+    "client",
+    "nui",
+    "roleplay"
+  ],
+  "author": "oaky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oakyydev/oaky_validator/issues"
+  },
+  "homepage": "https://github.com/oakyydev/oaky_validator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
