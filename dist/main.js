@@ -51,16 +51,20 @@ class Validator {
         }
     }
     static async getLabel(key) {
-        /** @ts-ignore */
-        const data = await fetch(`https://oaky_validator/getTranslations`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=UTF-8'
-            },
-            body: JSON.stringify({})
-        });
-        const json = await data.json();
-        return json.resp.attributes.hasOwnProperty(key) ? json.resp.attributes[key] : key;
+        try {
+            const data = await fetch(`https://oaky_validator/getTranslations`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                },
+                body: JSON.stringify({})
+            });
+            const json = await data.json();
+            return json.resp.attributes.hasOwnProperty(key) ? json.resp.attributes[key] : key;
+        }
+        catch (err) {
+            return key;
+        }
     }
 }
 _a = Validator;
@@ -174,6 +178,7 @@ Validator.availableRules = {
                         message: `${label} muss ausgefüllt werden.`
                     };
                 }
+                break;
         }
         return {
             success: true,

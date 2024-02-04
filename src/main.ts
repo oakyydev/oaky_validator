@@ -115,6 +115,7 @@ class Validator {
                             message: `${label} muss ausgefüllt werden.`
                         };
                     }
+                    break;
             }
 
             return {
@@ -199,16 +200,19 @@ class Validator {
     }
 
     private static async getLabel(key: string) {
-        /** @ts-ignore */
-        const data = await fetch(`https://oaky_validator/getTranslations`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=UTF-8'
-            },
-            body: JSON.stringify({})
-        })
-        const json = await data.json();
-
-        return json.resp.attributes.hasOwnProperty(key) ? json.resp.attributes[key] : key;
+        try {
+            const data = await fetch(`https://oaky_validator/getTranslations`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                },
+                body: JSON.stringify({})
+            })
+            const json = await data.json();
+    
+            return json.resp.attributes.hasOwnProperty(key) ? json.resp.attributes[key] : key;
+        } catch (err) {
+            return key;
+        }
     }
 }
